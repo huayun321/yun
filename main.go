@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/huayun321/yun/yun"
 	"log"
 	"net/http"
 )
@@ -24,7 +25,15 @@ func (e *Engine) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	engine := new(Engine)
-	log.Fatal(http.ListenAndServe(":9999", engine))
+	y := yun.New()
+	y.GET("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "URL.Path = %q\n", r.URL.Path)
+	})
+	y.GET("/hello", func(w http.ResponseWriter, r *http.Request) {
+		for k, v := range r.Header {
+			fmt.Fprintf(w, "Header[%q] = %q\n", k, v)
+		}
+	})
+	log.Fatal(y.Run(":9999"))
 
 }

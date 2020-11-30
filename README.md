@@ -25,3 +25,16 @@ Header["Accept"] = ["*/*"]
 404 NOT FOUND: /x
 
 ```
+
+* 封装进yun包
+
+```shell
+➜  huayun321 curl http://localhost:9999      
+URL.Path = "/"
+➜  huayun321 curl http://localhost:9999/hello
+Header["Accept"] = ["*/*"]
+Header["User-Agent"] = ["curl/7.64.1"]
+➜  huayun321 curl http://localhost:9999/x    
+404 NOT FOUND: /x
+
+```
