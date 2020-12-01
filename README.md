@@ -191,7 +191,7 @@ Header["User-Agent"] = ["curl/7.64.1"]
 
 #### day2 
 
-* 适用Context封装HTTP返回的重复操作，例如设置返回header body 序列化
+* 使用Context封装HTTP返回的重复操作，例如设置返回header body 序列化
 
 ```shell
 ➜  yun git:(main) ✗ tree
