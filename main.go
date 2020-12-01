@@ -27,7 +27,7 @@ func (e *Engine) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	y := yun.New()
 	y.GET("/", func(c *yun.Context) {
-		c.HTML(http.StatusOK, "<h1>Hello Gee</h1>")
+		c.HTML(http.StatusOK, "<h1>Hello Yun</h1>")
 	})
 	y.GET("/hello", func(c *yun.Context) {
 		// expect /hello?name=yun

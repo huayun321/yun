@@ -430,10 +430,14 @@ Content-Type: text/html
 Date: Tue, 01 Dec 2020 12:18:01 GMT
 Content-Length: 18
 
-<h1>Hello Gee</h1>%                                                             ➜  huayun321 curl "http://localhost:9999/hello?name=yun"
+<h1>Hello Yun</h1>%                    
+                             
+➜  huayun321 curl "http://localhost:9999/hello?name=yun"
 hello yun, you're at /hello
+
 ➜  huayun321 curl "http://localhost:9999/login" -X POST -d 'username=yun&password=1234'
 {"password":"1234","username":"yun"}
+
 ➜  huayun321 curl -i http://localhost:9999/x            
 HTTP/1.1 404 Not Found
 Content-Type: text/plain
